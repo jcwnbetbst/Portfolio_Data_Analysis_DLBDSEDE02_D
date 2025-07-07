@@ -149,3 +149,74 @@ thesoftfootball: 9
 
 - **uMass-Kurve**: [Topic_Coherence.png](Topic_Coherence.png)
 - **Word2Vec-Modell**: [`word2vec.html`](word2vec.html)
+
+
+---
+
+## Anleitung zur Verwendung der Skripte
+
+### Voraussetzungen
+
+- **Python-Version 3.10 oder höher**
+- Ein gültiger Twitter API-Zugang (Basic Tier)
+- Die in der `requirements.txt` aufgelisteten Bibliotheken:
+  - `tweepy`, `pandas`, `nltk`, `gensim`, `matplotlib`, `numpy`, `scikit-learn`, `plotly`, `termcolor`
+- Skripte und JSON-Datei müssen im selben Ordner liegen
+
+### Installation der Bibliotheken
+
+Installiere die notwendigen Pakete mit:
+
+```
+pip install -r requirements.txt
+```
+
+Optional kann dies auch manuell durchgeführt werden:
+
+```
+pip install tweepy pandas nltk gensim matplotlib numpy scikit-learn plotly termcolor
+```
+
+### Schritt 1: Tweets abrufen oder vorhandene Daten nutzen
+
+**Möglichkeit 1: Eigene Tweets abrufen**
+
+1. Öffne die Datei `fetch_tweets.py`.
+2. Ersetze den Platzhalter `<<BEARER TOKEN>>` durch deinen Twitter API Token.
+3. Du kannst im Skript außerdem die gewünschte Region, die Sprache sowie die minimale und maximale Anzahl der Tweets anpassen.
+4. Führe das Skript aus, um die Tweets abzurufen:
+
+```
+python fetch_tweets.py
+```
+
+Dadurch wird eine Datei namens `fetched_tweets.json` erstellt.
+
+**Möglichkeit 2: Vorhandene Daten nutzen**
+
+Falls du bereits eine `fetched_tweets.json`-Datei hast oder die im Repository liegende verwenden willst, kannst du direkt mit der Analyse weitermachen.
+
+### Schritt 2: Tweets analysieren
+
+1. Führe das Analyse-Skript aus:
+
+```
+python tweets_analyze.py
+```
+
+2. Beim Starten wird eine interaktive Abfrage gestartet, bei der du mit `j` (Ja) oder `n` (Nein) antworten kannst, um den Download zu steuern, anhand dessen werden die NLTK-Bibliotheken heruntergeladen. (Das Herunterladen ist nur beim ersten Start notwendig)
+
+### Ergebnisse
+
+Beim Ausführen des Skripts werden folgende konkrete Inhalte erzeugt oder angezeigt:
+
+- **Top 10 Hashtags**: Liste der am häufigsten verwendeten Hashtags im Datensatz.
+- **Top 10 Nutzer**: Liste der aktivsten Twitter-Accounts, sortiert nach Tweet-Anzahl.
+- **uMass-Topic-Coherence-Werte**: Bewertung der Kohärenz über verschiedene Themenanzahlen (1–100).
+- **Top 5 Themen**: Die fünf inhaltlich dominanten Themen im Datensatz, als gewichtete Schlüsselwörter dargestellt.
+- **Word2Vec-Modell**: Darstellung von Wortähnlichkeiten in einem 2D-Raum.
+
+  
+- Die Topic-Coherence-Grafik ([Topic_Coherence.png](Topic_Coherence.png)) wird während der Ausführung angezeigt, aber nicht automatisch gespeichert. Du kannst sie jedoch manuell sichern.
+  
+- Alternativ kannst du auch das Jupyter Notebook verwenden, um die Analysen durchzuführen. In diesem Fall ist kein separater Download der Skripte nötig.
