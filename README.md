@@ -147,5 +147,5 @@ thesoftfootball: 9
 
 ## Visualisierungen
 
-- **uMass-Kurve**: `Topic_Coherence.png`
+- **uMass-Kurve**: [Topic_Coherence.png](Topic_Coherence.png)
 - **Word2Vec-Modell**: [`word2vec.html`](word2vec.html)
