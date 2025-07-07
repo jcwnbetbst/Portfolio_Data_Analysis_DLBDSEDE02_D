@@ -1,0 +1,9 @@
+tweepy
+pandas
+nltk
+gensim
+matplotlib
+numpy
+scikit-learn
+plotly
+termcolor
