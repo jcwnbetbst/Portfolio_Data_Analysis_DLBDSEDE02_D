@@ -1,5 +1,8 @@
 # Portfolio_Data_Analysis_DLBDSEDE02_D
 
+
+'''
+
 Top 10 Hashtags:
 
 fifacwc: 174
@@ -144,3 +147,5 @@ Topic_Coherence.png
 Word Embedding (Word2Vec):
 
 word2vec.html
+
+'''
