@@ -174,7 +174,7 @@ pip install -r requirements.txt
 Optional kann dies auch manuell durchgeführt werden:
 
 ```
-pip install tweepy pandas nltk gensim matplotlib numpy scikit-learn plotly termcolor
+pip install numpy scipy tweepy pandas nltk gensim matplotlib scikit-learn plotly termcolor ipython nbformat
 ```
 
 ### Schritt 1: Tweets abrufen oder vorhandene Daten nutzen
