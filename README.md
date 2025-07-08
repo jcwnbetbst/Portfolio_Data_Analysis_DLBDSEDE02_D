@@ -157,7 +157,7 @@ thesoftfootball: 9
 
 ### Voraussetzungen
 
-- **Python-Version 3.10 oder höher**
+- **Verwenden Sie Python-Version 3.11**
 - Ein gültiger Twitter API-Zugang (Basic Tier)
 - Die in der `requirements.txt` aufgelisteten Bibliotheken:
   - `tweepy`, `pandas`, `nltk`, `gensim`, `matplotlib`, `numpy`, `scikit-learn`, `plotly`, `termcolor`
